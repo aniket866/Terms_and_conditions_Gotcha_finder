@@ -1,0 +1,42 @@
+/* The Dangerous Text Highlight */
+.tos-gotcha-highlight {
+  background-color: rgba(255, 0, 0, 0.2);
+  border-bottom: 2px solid red;
+  cursor: help;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.tos-gotcha-highlight:hover {
+  background-color: rgba(255, 0, 0, 0.4);
+}
+
+/* The Tooltip (The Warning) */
+.tos-gotcha-highlight::after {
+  content: attr(data-tos-warning);
+  visibility: hidden;
+  opacity: 0;
+  width: 250px;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 99999;
+  bottom: 125%; /* Position above */
+  left: 50%;
+  margin-left: -125px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  border: 1px solid #ff4444;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.tos-gotcha-highlight:hover::after {
+  visibility: visible;
+  opacity: 1;
+}

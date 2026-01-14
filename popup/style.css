@@ -1,0 +1,52 @@
+body {
+  width: 300px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+button {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #cc0000;
+}
+
+.status {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.loader {
+  margin-top: 10px;
+  color: #ff4444;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
