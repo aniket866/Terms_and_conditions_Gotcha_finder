@@ -1,6 +1,5 @@
-
-// const API_KEY = "AIzaSyCxCqmW4PAzBGzjm7PmviDg-LwOk2fBcOU"; 
-const API_KEY = "AIzaSyCxCqmW4PAzBGzjm7PmviDg-LwOk2fBcOU"; 
+ 
+const API_KEY = ""; 
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "analyzeText") {
