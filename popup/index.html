@@ -8,16 +8,52 @@
 </head>
 <body>
   <div class="container">
-    <h2>🕵️‍♂️ Gotcha Finder</h2>
-    <p>Scan this page for dangerous legal clauses.</p>
+    <div class="header-row">
+      <h2>🕵️‍♂️ Gotcha Finder</h2>
+      <button id="infoBtn" class="info-icon" title="About this extension">ℹ</button>
+    </div>
     
+    <p class="subtitle">Scan for legal traps & hidden clauses.</p>
+    
+    <div id="infoSection" class="info-box" style="display:none;">
+      <p><b>About This App:</b></p>
+      <p>This extension uses AI to scan legal documents for "gotchas" like forced arbitration, data selling, and hidden fees.</p>
+      <p>It highlights dangerous text directly on the page so you can read what matters.</p>
+      <button id="closeInfoBtn" class="small-close">Close</button>
+    </div>
+
     <button id="scanBtn">🔍 Scan Page</button>
     
-    <div id="status" class="status">Ready</div>
+    <div id="status" class="status">Ready to protect you.</div>
     
     <div class="loader" id="loader" style="display:none;">
-      Analyzing with AI...
+      <div class="spinner"></div>
+      Analyzing legal text...
     </div>
+
+    <div id="stats-container" class="stats-box" style="display:none;">
+      <div class="stat-item red">
+        <span class="stat-count" id="count-red">0</span> Critical
+      </div>
+      <div class="stat-item orange">
+        <span class="stat-count" id="count-orange">0</span> Caution
+      </div>
+      <div class="stat-item green">
+        <span class="stat-count" id="count-green">0</span> Safe
+      </div>
+    </div>
+
+    <div class="legend-box">
+      <div class="legend-item"><span class="dot red"></span> Critical</div>
+      <div class="legend-item"><span class="dot orange"></span> Caution</div>
+      <div class="legend-item"><span class="dot green"></span> Info</div>
+    </div>
+
+    <hr class="divider">
+
+    <button id="geminiBtn" class="secondary-btn">✨ Deep Dive (Ask Gemini)</button>
+    <button id="toggleFloatingBtn" class="secondary-btn outline">Show Floating Detective 🕵️‍♂️</button>
+
   </div>
   <script src="script.js"></script>
 </body>
